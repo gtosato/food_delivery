@@ -1,12 +1,21 @@
-import { View, Text } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 import React from "react";
+import CategoryCard from "./CategoryCard";
 
-const categories = () => {
+const Categories = () => {
 	return (
-		<View>
-			<Text>categories</Text>
-		</View>
+		<ScrollView
+			contentContainerStyle={{
+				paddingHorizontal: 15,
+				paddingTop: 10,
+			}}
+			horizontal
+			showsHorizontalScrollIndicator={false}
+		>
+			{/* CategoryCard */}
+			<CategoryCard imgUrl="" title="Testing" />
+		</ScrollView>
 	);
 };
 
-export default categories;
+export default Categories;
