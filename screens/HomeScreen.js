@@ -8,9 +8,9 @@ import {
 	MagnifyingGlassIcon,
 	AdjustmentsVerticalIcon,
 } from "react-native-heroicons/outline";
-import Categories from "../components/Categories";
 import FeaturedRow from "../components/FeaturedRow";
 import sanityClient from "../sanity";
+import Categories from "../components/Categories";
 
 const HomeScreen = () => {
 	const navigation = useNavigation();
@@ -82,8 +82,8 @@ const HomeScreen = () => {
 
 				{featuredCategories?.map((category) => (
 					<FeaturedRow
-						key={category.id}
-						id={category.id}
+						key={category._id}
+						id={category._id}
 						title={category.name}
 						description={category.short_description}
 					/>

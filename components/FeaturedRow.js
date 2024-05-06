@@ -10,24 +10,25 @@ const FeaturedRow = ({ id, title, description }) => {
 	useEffect(() => {
 		sanityClient
 			.fetch(
-				`
-		*[_type == "featured" && _id == $id] {
-			...,
-			restaurants[]-> {
-				...,
-				dishes[]->,
-				type-> {
-					name
-				}
-			},
-		}[0]
-		`,
+				`*[_type == "featured" && _id == $id] {
+                ...,
+                restaurants[]-> {
+                    ...,
+                    dishes[]->,
+                    type-> {
+                        name
+                    }
+                }
+            }[0]`,
 				{ id }
 			)
 			.then((data) => {
 				setRestaurants(data?.restaurants);
+			})
+			.catch((error) => {
+				console.error("Error fetching data: ", error);
 			});
-	}, []);
+	}, [id]);
 
 	return (
 		<View>
@@ -48,8 +49,8 @@ const FeaturedRow = ({ id, title, description }) => {
 			>
 				{restaurants?.map((restaurant) => (
 					<RestaurantCard
-						key={restaurant.id}
-						id={restaurant.id}
+						key={restaurant._id}
+						id={restaurant._id}
 						imgUrl={restaurant.image}
 						title={restaurant.name}
 						rating={restaurant.rating}

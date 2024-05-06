@@ -5,7 +5,7 @@ const client = createClient({
 	projectId: "axd4xdau",
 	dataset: "production",
 	useCdn: true,
-	apiVersion: "2021-10-21",
+	apiVersion: "2023-05-03",
 });
 
 const builder = urlBuilder(client);
