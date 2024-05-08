@@ -77,7 +77,6 @@ const HomeScreen = () => {
 			<ScrollView className="bg-gray-100">
 				{/* Categories */}
 				<Categories />
-
 				{/* Featured */}
 
 				{featuredCategories?.map((category) => (
