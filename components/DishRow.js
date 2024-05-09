@@ -1,5 +1,5 @@
 import { View, Text, TouchableOpacity, Image } from "react-native";
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { urlFor } from "../sanity";
 import { MinusCircleIcon, PlusCircleIcon } from "react-native-heroicons/solid";
 import { useDispatch, useSelector } from "react-redux";
@@ -27,7 +27,7 @@ const DishRow = ({ id, name, description, price, image }) => {
 		dispatch(removeFromBasket({ id }));
 	};
 
-	console.log(items);
+	// console.log(items);
 
 	return (
 		<>
