@@ -5,7 +5,7 @@ This application mocks the functionality and appearance of a Food Delivery App. 
 <br />
 
 <div style='text-align: center;'>
-  <img src='./demo480.gif' alt='demo' />
+  <img src='./demo480p.gif' alt='demo' />
 </div>
 
 ## Technology Requirements / Purpose
