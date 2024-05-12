@@ -20,7 +20,7 @@ Application was built using the following technologies:
 -    React Native Navigation
 -    React Native Maps (https://github.com/react-native-maps/react-native-maps)
 
-This project was built to develop a better understanding of utilising React Native to develop a cross-platform mobile application. It uses Sanity as a Content Management System to simplify record creation and maintenance. It also uses Expo Go to create a sandboxed instance of the application on respective simulator devices.
+This project was built to develop a better understanding of utilising React Native to develop a cross-platform mobile application. It uses Sanity as a Content Management System to simplify record creation and maintenance. It also uses Expo Go to create a sandboxed instance of the application on respective devices and simulator devices.
 
 Finally, restuarant location is displayed and pinned on the Delivery Screen.
 
@@ -76,4 +76,4 @@ $ sanity deploy
 
 ## Road Blocks
 
--    Recent upgrade of Expo Go (08/05/24) was causing application to crash when managing navigation (useNavigation()). This took several hours to rectify as it was initially working prior to updating Expo. I needed to drop down to Expo (v50) to rectify. Unfortunately, this does not allow the generated QR code for the application to install directly onto iPhone for testing, only simulator.
+-    Recent upgrade of Expo Go (v51) (08/05/24) was causing application to crash when managing navigation (useNavigation()). This took several hours to rectify as it was initially working prior to updating Expo. I needed to drop down to Expo (v50) to rectify. Unfortunately, this does not allow the generated QR code for the application to install directly onto iPhone for testing, only simulator.
